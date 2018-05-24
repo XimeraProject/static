@@ -1,5 +1,29 @@
 # static Ximera
 
+## Using this as a TeXShop engine
+
+Open the MacOS terminal.  First you will need to install some additional TeX files.
+```bash
+cd ~/Library
+mkdir -p texmf/tex/latex
+cd ~/Library/texmf/tex/latex
+git clone https://github.com/XimeraProject/ximeraLatex.git
+cd ximeraLatex
+git checkout development
+```
+
+Then install the engine and make it executable.
+```bash
+cd ~/Library/TeXShop/Engines
+curl -O https://raw.githubusercontent.com/XimeraProject/static/master/ximera.engine
+chmod +x ximera.engine
+```
+
+Then restart TeXShop, and create a file with
+``\documentclass{ximera}`` and choose ``ximera`` as the engine from
+the top bar.  When you click ``Typeset`` then you will see a PDF, but
+also an .html file will be created.
+
 ## Using ``compile.sh``
 
 If you have [the development version of
