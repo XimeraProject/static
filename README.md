@@ -1,9 +1,18 @@
 # static Ximera
 
+## Using ``compile.sh``
+
+If you have [the development version of
+ximeraLaTeX](https://github.com/XimeraProject/ximeraLatex/tree/development)
+installed in your local ``texmf`` tree, then the ``compile.sh`` script
+can be used to transform TeX into HTML.
+
+## Using ``xake``
+
 If you have installed
 [``xake``](https://github.com/XimeraProject/xake) then you can also
-create static HTML.  You will also need to have [the development
-version of
+create static HTML with **support for SVG images**.  You will also
+need to have [the development version of
 ximeraLaTeX](https://github.com/XimeraProject/ximeraLatex/tree/development)
 installed in your ``texmf`` tree in order to produce HTML with a
 ``<head>`` that points to the Ximera server at Ohio State.
