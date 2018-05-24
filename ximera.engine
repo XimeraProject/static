@@ -1,0 +1,5 @@
+#!/bin/bash
+set path= ($path /Library/TeX/texbin /usr/texbin /usr/local/bin)
+pdflatex -file-line-error -shell-escape "\\PassOptionsToClass{tikzexport}{ximera}\\PassOptionsToClass{xake}{ximera}\\PassOptionsToClass{xake}{xourse}\\nonstopmode\\input{$1}"
+pdflatex -file-line-error -shell-escape "\\PassOptionsToClass{tikzexport}{ximera}\\PassOptionsToClass{xake}{ximera}\\PassOptionsToClass{xake}{xourse}\\nonstopmode\\input{$1}"
+htlatex $1 "ximera,charset=utf-8,-css" " -cunihtf -utf8" "" "--interaction=nonstopmode -shell-escape -file-line-error"
